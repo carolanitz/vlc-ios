@@ -1,5 +1,5 @@
 /*****************************************************************************
- * VLCFirstStepsThirdPageViewController
+ * VLCFirstStepsWifiSharingViewController
  * VLC for iOS
  *****************************************************************************
  * Copyright (c) 2013-2014 VideoLAN. All rights reserved.
@@ -10,15 +10,11 @@
  * Refer to the COPYING file of the official project for license.
  *****************************************************************************/
 
-#import "VLCFirstStepsThirdPageViewController.h"
+#import "VLCFirstStepsWifiSharingViewController.h"
 #import <ifaddrs.h>
 #import <arpa/inet.h>
 
-@interface VLCFirstStepsThirdPageViewController ()
-
-@end
-
-@implementation VLCFirstStepsThirdPageViewController
+@implementation VLCFirstStepsWifiSharingViewController
 
 - (void)viewDidLoad
 {

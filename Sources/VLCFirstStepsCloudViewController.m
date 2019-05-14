@@ -1,5 +1,5 @@
 /*****************************************************************************
- * VLCFirstStepsFourthPageViewController
+ * VLCFirstStepsCloudViewController
  * VLC for iOS
  *****************************************************************************
  * Copyright (c) 2013-2014 VideoLAN. All rights reserved.
@@ -10,13 +10,9 @@
  * Refer to the COPYING file of the official project for license.
  *****************************************************************************/
 
-#import "VLCFirstStepsFourthPageViewController.h"
+#import "VLCFirstStepsCloudViewController.h"
 
-@interface VLCFirstStepsFourthPageViewController ()
-
-@end
-
-@implementation VLCFirstStepsFourthPageViewController
+@implementation VLCFirstStepsCloudViewController
 
 - (void)viewDidLoad
 {

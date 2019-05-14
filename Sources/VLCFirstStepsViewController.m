@@ -11,9 +11,9 @@
  *****************************************************************************/
 
 #import "VLCFirstStepsViewController.h"
-#import "VLCFirstStepsSecondPageViewController.h"
-#import "VLCFirstStepsThirdPageViewController.h"
-#import "VLCFirstStepsFourthPageViewController.h"
+#import "VLCFirstStepsiTunesSyncViewController.h"
+#import "VLCFirstStepsWifiSharingViewController.h"
+#import "VLCFirstStepsCloudViewController.h"
 
 @interface VLCFirstStepsViewController () <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 {
@@ -34,7 +34,7 @@
 
     [[pageVC view] setFrame:[[self view] bounds]];
 
-    [pageVC setViewControllers:@[[[VLCFirstStepsSecondPageViewController alloc] initWithNibName:nil bundle:nil]] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
+    [pageVC setViewControllers:@[[[VLCFirstStepsiTunesSyncViewController alloc] initWithNibName:nil bundle:nil]] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
 
     UIBarButtonItem *dismissButton = [UIBarButtonItem themedDarkToolbarButtonWithTitle:NSLocalizedString(@"BUTTON_DONE", nil) target:self andSelector:@selector(dismissFirstSteps)];
     self.navigationItem.rightBarButtonItem = dismissButton;
@@ -56,10 +56,10 @@
 
     switch (currentPage) {
         case 0:
-            returnedVC = [[VLCFirstStepsThirdPageViewController alloc] initWithNibName:nil bundle:nil];
+            returnedVC = [[VLCFirstStepsWifiSharingViewController alloc] initWithNibName:nil bundle:nil];
             break;
         case 1:
-            returnedVC = [[VLCFirstStepsFourthPageViewController alloc] initWithNibName:nil bundle:nil];
+            returnedVC = [[VLCFirstStepsCloudViewController alloc] initWithNibName:nil bundle:nil];
             break;
 
         default:
@@ -79,10 +79,10 @@
 
     switch (currentPage) {
         case 1:
-            returnedVC = [[VLCFirstStepsSecondPageViewController alloc] initWithNibName:nil bundle:nil];
+            returnedVC = [[VLCFirstStepsiTunesSyncViewController alloc] initWithNibName:nil bundle:nil];
             break;
         case 2:
-            returnedVC = [[VLCFirstStepsThirdPageViewController alloc] initWithNibName:nil bundle:nil];
+            returnedVC = [[VLCFirstStepsWifiSharingViewController alloc] initWithNibName:nil bundle:nil];
             break;
 
         default:

@@ -1,5 +1,5 @@
 /*****************************************************************************
- * VLCFirstStepsThirdPageViewController
+ * VLCFirstStepsCloudViewController
  * VLC for iOS
  *****************************************************************************
  * Copyright (c) 2013-2014 VideoLAN. All rights reserved.
@@ -12,14 +12,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VLCFirstStepsThirdPageViewController : UIViewController
-
-@property (nonatomic, strong) IBOutlet UILabel *connectDescriptionLabel;
-@property (nonatomic, strong) IBOutlet UILabel *uploadDescriptionLabel;
-@property (nonatomic, strong) IBOutlet UILabel *currentAddressLabel;
-@property (nonatomic, strong) IBOutlet UIView *actualContentView;
+@interface VLCFirstStepsCloudViewController : UIViewController
 
 @property (readonly) NSString *pageTitle;
 @property (readonly) NSUInteger page;
+
+@property (nonatomic, strong) IBOutlet UILabel *uploadDescriptionLabel;
+@property (nonatomic, strong) IBOutlet UILabel *accessDescriptionLabel;
+@property (nonatomic, strong) IBOutlet UIView *actualContentView;
 
 @end

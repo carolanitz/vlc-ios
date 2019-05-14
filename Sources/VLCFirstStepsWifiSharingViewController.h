@@ -1,5 +1,5 @@
 /*****************************************************************************
- * VLCFirstStepsFourthPageViewController
+ * VLCFirstStepsWifiSharingViewController
  * VLC for iOS
  *****************************************************************************
  * Copyright (c) 2013-2014 VideoLAN. All rights reserved.
@@ -12,13 +12,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VLCFirstStepsFourthPageViewController : UIViewController
+@interface VLCFirstStepsWifiSharingViewController : UIViewController
+
+@property (nonatomic, strong) IBOutlet UILabel *connectDescriptionLabel;
+@property (nonatomic, strong) IBOutlet UILabel *uploadDescriptionLabel;
+@property (nonatomic, strong) IBOutlet UILabel *currentAddressLabel;
+@property (nonatomic, strong) IBOutlet UIView *actualContentView;
 
 @property (readonly) NSString *pageTitle;
 @property (readonly) NSUInteger page;
-
-@property (nonatomic, strong) IBOutlet UILabel *uploadDescriptionLabel;
-@property (nonatomic, strong) IBOutlet UILabel *accessDescriptionLabel;
-@property (nonatomic, strong) IBOutlet UIView *actualContentView;
 
 @end
