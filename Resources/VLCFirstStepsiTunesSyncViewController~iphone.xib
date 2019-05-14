@@ -28,7 +28,7 @@
                         <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="10G-hG-IZD">
                             <rect key="frame" x="21" y="211" width="277" height="201"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" red="0.1215686275" green="0.1215686275" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <string key="text">Connect Your Device to Your Mac or PC using the cable.
 Open iTunes.
 Select Your device.
@@ -55,13 +55,10 @@ Transfer your files.</string>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 </imageView>
                             </subviews>
-                            <color key="backgroundColor" red="0.11999999731779099" green="0.11999999731779099" blue="0.11999999731779099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" red="0.1215686275" green="0.1215686275" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="0.1215686275" green="0.1215686275" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </view>
     </objects>
     <resources>

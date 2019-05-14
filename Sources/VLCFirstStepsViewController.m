@@ -14,6 +14,7 @@
 #import "VLCFirstStepsiTunesSyncViewController.h"
 #import "VLCFirstStepsWifiSharingViewController.h"
 #import "VLCFirstStepsCloudViewController.h"
+#import "VLC-Swift.h"
 
 @interface VLCFirstStepsViewController () <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 {
@@ -40,11 +41,17 @@
 
     self.navigationItem.rightBarButtonItem = dismissButton;
     self.title = NSLocalizedString(@"FIRST_STEPS_ITUNES", nil);
-    self.view.backgroundColor = [UIColor blackColor];
 
     [self addChildViewController:pageVC];
     [self.view addSubview:[pageVC view]];
     [pageVC didMoveToParentViewController:self];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateTheme) name:kVLCThemeDidChangeNotification object:nil];
+    [self updateTheme];
+}
+
+- (void)updateTheme
+{
+    self.view.backgroundColor = PresentationTheme.current.colors.background;
 }
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController

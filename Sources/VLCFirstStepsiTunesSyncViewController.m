@@ -11,6 +11,7 @@
  *****************************************************************************/
 
 #import "VLCFirstStepsiTunesSyncViewController.h"
+#import "VLC-Swift.h"
 
 @implementation VLCFirstStepsiTunesSyncViewController
 
@@ -24,6 +25,16 @@
         self.descriptionLabel.text = [NSString stringWithFormat:NSLocalizedString(@"FIRST_STEPS_ITUNES_DETAILS", nil), model, model];
     else
         self.descriptionLabel.text = [[NSString stringWithFormat:NSLocalizedString(@"FIRST_STEPS_ITUNES_DETAILS", nil), model, model] stringByReplacingOccurrencesOfString:@"\n" withString:@"\n\n"];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateTheme) name:kVLCThemeDidChangeNotification object:nil];
+    [self updateTheme];
+}
+
+- (void)updateTheme
+{
+    self.descriptionLabel.textColor = PresentationTheme.current.colors.cellTextColor;
+    self.actualContentView.backgroundColor = PresentationTheme.current.colors.background;
+    self.view.backgroundColor = PresentationTheme.current.colors.background;
 }
 
 - (void)viewWillAppear:(BOOL)animated

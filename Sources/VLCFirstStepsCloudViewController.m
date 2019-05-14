@@ -11,6 +11,7 @@
  *****************************************************************************/
 
 #import "VLCFirstStepsCloudViewController.h"
+#import "VLC-Swift.h"
 
 @implementation VLCFirstStepsCloudViewController
 
@@ -20,6 +21,16 @@
 
     self.uploadDescriptionLabel.text = NSLocalizedString(@"FIRST_STEPS_CLOUD_UPLOAD_DETAILS", nil);
     self.accessDescriptionLabel.text = NSLocalizedString(@"FIRST_STEPS_CLOUD_ACCESS_DETAILS", nil);
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateTheme) name:kVLCThemeDidChangeNotification object:nil];
+    [self updateTheme];
+}
+
+- (void)updateTheme
+{
+    self.accessDescriptionLabel.textColor = PresentationTheme.current.colors.cellTextColor;
+    self.uploadDescriptionLabel.textColor = PresentationTheme.current.colors.cellTextColor;
+    self.actualContentView.backgroundColor = PresentationTheme.current.colors.background;
+    self.view.backgroundColor = PresentationTheme.current.colors.background;
 }
 
 - (NSString *)pageTitle
