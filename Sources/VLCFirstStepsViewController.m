@@ -11,12 +11,9 @@
  *****************************************************************************/
 
 #import "VLCFirstStepsViewController.h"
-#import "VLCFirstStepsFirstPageViewController.h"
 #import "VLCFirstStepsSecondPageViewController.h"
 #import "VLCFirstStepsThirdPageViewController.h"
 #import "VLCFirstStepsFourthPageViewController.h"
-#import "VLCFirstStepsFifthPageViewController.h"
-#import "VLCFirstStepsSixthPageViewController.h"
 
 @interface VLCFirstStepsViewController () <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 {
@@ -37,11 +34,11 @@
 
     [[pageVC view] setFrame:[[self view] bounds]];
 
-    [pageVC setViewControllers:@[[[VLCFirstStepsFirstPageViewController alloc] initWithNibName:nil bundle:nil]] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
+    [pageVC setViewControllers:@[[[VLCFirstStepsSecondPageViewController alloc] initWithNibName:nil bundle:nil]] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
 
     UIBarButtonItem *dismissButton = [UIBarButtonItem themedDarkToolbarButtonWithTitle:NSLocalizedString(@"BUTTON_DONE", nil) target:self andSelector:@selector(dismissFirstSteps)];
     self.navigationItem.rightBarButtonItem = dismissButton;
-    self.title = NSLocalizedString(@"FIRST_STEPS_WELCOME", nil);
+    self.title = NSLocalizedString(@"FIRST_STEPS_ITUNES", nil);
     self.view.backgroundColor = [UIColor blackColor];
 
     [self addChildViewController:pageVC];
@@ -58,20 +55,11 @@
         currentPage = (NSUInteger)[viewController performSelector:@selector(page) withObject:nil];
 
     switch (currentPage) {
-        case 1:
-            returnedVC = [[VLCFirstStepsSecondPageViewController alloc] initWithNibName:nil bundle:nil];
-            break;
-        case 2:
+        case 0:
             returnedVC = [[VLCFirstStepsThirdPageViewController alloc] initWithNibName:nil bundle:nil];
             break;
-        case 3:
+        case 1:
             returnedVC = [[VLCFirstStepsFourthPageViewController alloc] initWithNibName:nil bundle:nil];
-            break;
-        case 4:
-            returnedVC = [[VLCFirstStepsFifthPageViewController alloc] initWithNibName:nil bundle:nil];
-            break;
-        case 5:
-            returnedVC = [[VLCFirstStepsSixthPageViewController alloc] initWithNibName:nil bundle:nil];
             break;
 
         default:
@@ -90,20 +78,11 @@
         currentPage = (NSUInteger)[viewController performSelector:@selector(page) withObject:nil];
 
     switch (currentPage) {
-        case 2:
-            returnedVC = [[VLCFirstStepsFirstPageViewController alloc] initWithNibName:nil bundle:nil];
-            break;
-        case 3:
+        case 1:
             returnedVC = [[VLCFirstStepsSecondPageViewController alloc] initWithNibName:nil bundle:nil];
             break;
-        case 4:
+        case 2:
             returnedVC = [[VLCFirstStepsThirdPageViewController alloc] initWithNibName:nil bundle:nil];
-            break;
-        case 5:
-            returnedVC = [[VLCFirstStepsFourthPageViewController alloc] initWithNibName:nil bundle:nil];
-            break;
-        case 6:
-            returnedVC = [[VLCFirstStepsFifthPageViewController alloc] initWithNibName:nil bundle:nil];
             break;
 
         default:
@@ -115,7 +94,7 @@
 
 - (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController
 {
-    return 6;
+    return 3;
 }
 
 - (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController

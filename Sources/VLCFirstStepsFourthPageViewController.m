@@ -33,7 +33,7 @@
 
 - (NSUInteger)page
 {
-    return 4;
+    return 2;
 }
 
 @end
