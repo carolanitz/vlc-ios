@@ -2,6 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
+<<<<<<< HEAD:vlc-ios/Images.xcassets/MenuNavigation/Local.imageset/Contents.json
       "scale" : "1x",
       "filename" : "Local.png"
     },
@@ -14,6 +15,20 @@
       "idiom" : "universal",
       "scale" : "3x",
       "filename" : "Local@3x.png"
+=======
+      "filename" : "Laptop.png",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "Laptop@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "Laptop@3x.png",
+      "scale" : "3x"
+>>>>>>> FirstSteps: Adapt FirstStepsiTunesSyncViewController to new UI:vlc-ios/Images.xcassets/FirstSteps/laptop.imageset/Contents.json
     }
   ],
   "info" : {

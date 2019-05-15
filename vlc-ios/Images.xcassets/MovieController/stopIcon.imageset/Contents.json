@@ -2,6 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
+<<<<<<< HEAD:vlc-ios/Images.xcassets/MovieController/stopIcon.imageset/Contents.json
       "scale" : "1x",
       "filename" : "stop.png"
     },
@@ -14,6 +15,20 @@
       "idiom" : "universal",
       "scale" : "3x",
       "filename" : "stop@3x.png"
+=======
+      "filename" : "iPhone.png",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "iPhone@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "iPhone@3x.png",
+      "scale" : "3x"
+>>>>>>> FirstSteps: Adapt FirstStepsiTunesSyncViewController to new UI:vlc-ios/Images.xcassets/FirstSteps/phone.imageset/Contents.json
     }
   ],
   "info" : {
