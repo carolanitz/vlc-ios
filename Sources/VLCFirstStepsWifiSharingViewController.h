@@ -2,10 +2,11 @@
  * VLCFirstStepsWifiSharingViewController
  * VLC for iOS
  *****************************************************************************
- * Copyright (c) 2013-2014 VideoLAN. All rights reserved.
+ * Copyright (c) 2013-2019 VideoLAN. All rights reserved.
  * $Id$
  *
- * Authors: Felix Paul Kühne <fkuehne # videolan.org>
+ * Authors: Carola Nitz       <caro # videolan.org
+ *          Felix Paul Kühne <fkuehne # videolan.org>
  *
  * Refer to the COPYING file of the official project for license.
  *****************************************************************************/
@@ -14,10 +15,10 @@
 
 @interface VLCFirstStepsWifiSharingViewController : UIViewController
 
-@property (nonatomic, strong) IBOutlet UILabel *connectDescriptionLabel;
-@property (nonatomic, strong) IBOutlet UILabel *uploadDescriptionLabel;
-@property (nonatomic, strong) IBOutlet UILabel *currentAddressLabel;
-@property (nonatomic, strong) IBOutlet UIView *actualContentView;
+@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *phoneImage;
+@property (weak, nonatomic) IBOutlet UIView *backgroundView;
 
 @property (readonly) NSString *pageTitle;
 @property (readonly) NSUInteger page;
