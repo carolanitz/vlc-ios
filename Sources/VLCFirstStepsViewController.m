@@ -54,6 +54,11 @@
     self.view.backgroundColor = PresentationTheme.current.colors.background;
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return PresentationTheme.current.colors.statusBarStyle;
+}
+
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
 {
     UIViewController *returnedVC;
