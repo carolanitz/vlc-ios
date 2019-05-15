@@ -19,18 +19,19 @@
 {
     [super viewDidLoad];
 
-    self.uploadDescriptionLabel.text = NSLocalizedString(@"FIRST_STEPS_CLOUD_UPLOAD_DETAILS", nil);
-    self.accessDescriptionLabel.text = NSLocalizedString(@"FIRST_STEPS_CLOUD_ACCESS_DETAILS", nil);
+    self.titleLabel.text = NSLocalizedString(@"FIRST_STEPS_CLOUD_TITLE", nil);
+    self.descriptionLabel.text = NSLocalizedString(@"FIRST_STEPS_CLOUD_DETAILS", nil);
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateTheme) name:kVLCThemeDidChangeNotification object:nil];
     [self updateTheme];
 }
 
 - (void)updateTheme
 {
-    self.accessDescriptionLabel.textColor = PresentationTheme.current.colors.cellTextColor;
-    self.uploadDescriptionLabel.textColor = PresentationTheme.current.colors.cellTextColor;
-    self.actualContentView.backgroundColor = PresentationTheme.current.colors.background;
-    self.view.backgroundColor = PresentationTheme.current.colors.background;
+    self.titleLabel.textColor = PresentationTheme.current.colors.cellTextColor;
+    self.descriptionLabel.textColor = PresentationTheme.current.colors.cellTextColor;
+    self.backgroundView.backgroundColor = PresentationTheme.current.colors.background;
+    BOOL isDarkTheme = PresentationTheme.current == PresentationTheme.darkTheme;
+    self.phoneImage.image = isDarkTheme ? [UIImage imageNamed:@"blackCloudiPhone"] : [UIImage imageNamed:@"whiteCloudiPhone"];
 }
 
 - (NSString *)pageTitle

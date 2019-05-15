@@ -25,18 +25,17 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o4k-tW-3aZ">
-                    <rect key="frame" x="0.0" y="613" width="375" height="199"/>
+                    <rect key="frame" x="0.0" y="634.33333333333337" width="375" height="177.66666666666663"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sync with your Computer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ChC-aV-9Uo" userLabel="Title">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share via Wifi" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ChC-aV-9Uo" userLabel="Title">
                             <rect key="frame" x="20" y="15.000000000000002" width="335" height="28.666666666666671"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ziw-4U-WDW">
-                            <rect key="frame" x="20" y="59" width="335" height="86"/>
+                        <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" text="Enter the generated URL in your favorite web browser while connected to the same network as your phone" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ziw-4U-WDW">
+                            <rect key="frame" x="20" y="59" width="335" height="65"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <string key="text">Connect Your Device to iTunes and select your device. Select "File Sharing" on the left side menu of iTunes and look for VLC to transfer files</string>
                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <color key="textColor" red="0.72000002860000001" green="0.72000002860000001" blue="0.72000002860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
@@ -53,7 +52,7 @@
                     </constraints>
                 </view>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whiteiPhone" translatesAutoresizingMaskIntoConstraints="NO" id="WNE-hc-yt2">
-                    <rect key="frame" x="17.666666666666657" y="273" width="340" height="340"/>
+                    <rect key="frame" x="18" y="294" width="340" height="340"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="340" id="3HP-K6-dkl"/>
                         <constraint firstAttribute="height" constant="340" id="MBp-TL-98J"/>

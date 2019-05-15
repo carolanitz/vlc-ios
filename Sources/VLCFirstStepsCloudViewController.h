@@ -17,8 +17,9 @@
 @property (readonly) NSString *pageTitle;
 @property (readonly) NSUInteger page;
 
-@property (nonatomic, strong) IBOutlet UILabel *uploadDescriptionLabel;
-@property (nonatomic, strong) IBOutlet UILabel *accessDescriptionLabel;
-@property (nonatomic, strong) IBOutlet UIView *actualContentView;
+@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *phoneImage;
+@property (weak, nonatomic) IBOutlet UIView *backgroundView;
 
 @end

@@ -28,7 +28,7 @@
 
 - (void)updateTheme
 {
-    self.titleLabel.textColor = PresentationTheme.current.colors.cellDetailTextColor;
+    self.titleLabel.textColor = PresentationTheme.current.colors.cellTextColor;
     self.descriptionLabel.textColor = PresentationTheme.current.colors.cellDetailTextColor;
     self.backgroundView.backgroundColor = PresentationTheme.current.colors.background;
     self.view.backgroundColor = PresentationTheme.current.colors.background;
